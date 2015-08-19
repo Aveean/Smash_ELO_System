@@ -1,0 +1,19 @@
+Player
+{
+	string DisplayName;
+	vector<string> Aliases;
+	
+	int Rank;
+	int ELO;
+	
+	vector<string> Characters;   // Character names, maybe make an enum later or something
+	
+	vector<ELOChange> MatchHistory;
+}
+
+ELOChange
+{
+	int ELODifference;    // can be positive or negative
+	Player Opponent;
+	string Score;     // just a string showing 2-1 or 0-2 or whatever
+}
